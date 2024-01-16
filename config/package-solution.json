@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "factory-sharepoint-client-side-solution",
+    "id": "c1f22a56-ea5d-4544-b31d-b0277af89992",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "factory-sharepoint description"
+      },
+      "longDescription": {
+        "default": "factory-sharepoint description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "factory-sharepoint Feature",
+        "description": "The feature that activates elements of the factory-sharepoint solution.",
+        "id": "b3c81082-f254-4501-b9da-a1d3207c9851",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/factory-sharepoint.sppkg"
+  }
+}
