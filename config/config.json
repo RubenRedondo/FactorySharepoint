@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/factoryCover/FactoryCoverWebPart.manifest.json"
         }
       ]
+    },
+    "factory-request-type-chooser-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/factoryRequestTypeChooser/FactoryRequestTypeChooserWebPart.js",
+          "manifest": "./src/webparts/factoryRequestTypeChooser/FactoryRequestTypeChooserWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "FactoryCoverWebPartStrings": "lib/webparts/factoryCover/loc/{locale}.js"
+    "FactoryCoverWebPartStrings": "lib/webparts/factoryCover/loc/{locale}.js",
+    "FactoryRequestTypeChooserWebPartStrings": "lib/webparts/factoryRequestTypeChooser/loc/{locale}.js"
   }
 }

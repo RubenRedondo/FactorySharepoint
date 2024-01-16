@@ -1,23 +1,65 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
-.factoryCover {
-  overflow: hidden;
-  padding: 1em;
-  color: "[theme:bodyText, default: #323130]";
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
-  }
-}
-
-.welcome {
-  text-align: center;
-}
-
-.welcomeImage {
+.wrapper {
   width: 100%;
-  max-width: 420px;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+
+  .cover {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+
+
+    .logo {
+      width: 100%;
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 32px;
+      h1 {
+        font-size: 14px;
+        color: #070721;
+        font-weight: normal;
+      }
+      img {
+        width: 180px;
+      }
+    }
+
+    .coverBackground {
+      position: relative;
+      z-index: 1;
+      grid-column: 2;
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      background-image: url("../assets/background.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before {
+        position: absolute;
+        content: "";
+        z-index: 2;
+        width: 120px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+
+
+  }
+
 }
+
 
 .links {
   a {

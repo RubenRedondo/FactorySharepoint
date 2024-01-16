@@ -1,32 +1,20 @@
 import * as React from 'react';
 import styles from './FactoryCover.module.scss';
-import type { IFactoryCoverProps } from './IFactoryCoverProps';
-import { escape } from '@microsoft/sp-lodash-subset';
+import {IFactoryCoverProps} from "./IFactoryCoverProps";
 
 export default class FactoryCover extends React.Component<IFactoryCoverProps, {}> {
   public render(): React.ReactElement<IFactoryCoverProps> {
-    const {
-      description,
-      isDarkTheme,
-      environmentMessage,
-      hasTeamsContext,
-      userDisplayName
-    } = this.props;
 
-    return (
-      <section className={`${styles.factoryCover} ${hasTeamsContext ? styles.teams : ''}`}>
-        <div className={styles.welcome}>
-          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
-        </div>
-        <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
+      return (
+      <section className={`${styles.wrapper}`}>
+        <div className={styles.cover}>
+
+            <div className={styles.logo}>
+                <h1>Bienvenido a la</h1>
+                <img src={require('../assets/logo.png')} alt=""/>
+            </div>
+
+            <div className={styles.coverBackground}></div>
         </div>
       </section>
     );
