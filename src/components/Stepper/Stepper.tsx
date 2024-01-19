@@ -15,7 +15,7 @@ const Stepper: React.FC<StepperProps> = (props) => {
         <div className={styles.stepper}>
             {
                 divs.map(i => (
-                    <span className={props.step === i ? styles.activeStep : styles.step}>{i}</span>
+                    <span onClick={() => props.change(i)} className={props.step === i ? styles.activeStep : styles.step}>{i}</span>
                 ))
             }
         </div>

@@ -14,7 +14,8 @@ const FactoryRequestTypeChooser: React.FC<IFactoryRequestTypeChooserProps> = (pr
     }
 
     const handleStepChange = (newStep: number) => {
-        setStep(newStep)
+        setStep(newStep);
+        console.log("change")
     }
 
     const onSuccess = () => {
@@ -26,7 +27,7 @@ const FactoryRequestTypeChooser: React.FC<IFactoryRequestTypeChooserProps> = (pr
     return (
         <section className={`${styles.chooserWrapper}`}>
 
-            <Stepper step={step} totalSteps={3} />
+            <Stepper step={step} totalSteps={3} change={handleStepChange} />
 
             {
                 step === 1 && (
