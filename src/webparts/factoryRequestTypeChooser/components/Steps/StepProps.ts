@@ -1,3 +1,3 @@
 export interface StepProps {
-    onSuccess: () => void;
+    onSuccess: (data: any) => void;
 }

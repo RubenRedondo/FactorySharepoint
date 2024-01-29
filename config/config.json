@@ -22,6 +22,6 @@
   "externals": {},
   "localizedResources": {
     "FactoryCoverWebPartStrings": "lib/webparts/factoryCover/loc/{locale}.js",
-    "FactoryRequestTypeChooserWebPartStrings": "lib/webparts/factoryRequestTypeChooser/loc/{locale}.js"
+    "FactoryRequestTypeChooserWebPartStrings": "lib/webparts/factoryRequestTypeChooser/loc/{locale}.js",
   }
 }

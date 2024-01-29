@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Stepper.module.scss";
-import type {StepperProps} from "./StepperProps";
+import type { StepperProps } from "./StepperProps";
 
 const Stepper: React.FC<StepperProps> = (props) => {
 
@@ -10,12 +10,17 @@ const Stepper: React.FC<StepperProps> = (props) => {
         divs.push(i);
     }
 
-
     return (
         <div className={styles.stepper}>
             {
                 divs.map(i => (
-                    <span onClick={() => props.change(i)} className={props.step === i ? styles.activeStep : styles.step}>{i}</span>
+                    <span
+                        key={i}
+                        onClick={() => i > 1 && props.change(i)}
+                        className={props.step === i ? styles.activeStep : styles.step}
+                    >
+                        {i}
+                    </span>
                 ))
             }
         </div>

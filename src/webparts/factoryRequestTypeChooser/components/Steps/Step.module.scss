@@ -7,11 +7,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 14px;
+  gap: 22px;
   background-color: white;
   width: 100%;
   border-radius: 5px;
-  padding: 16px;
+  padding: 32px;
   box-sizing: border-box;
 
   h2 {
@@ -27,6 +27,11 @@
     box-sizing: border-box;
     width: 100%;
     transition: all 0.3s ease;
+
+    &.fullField {
+      grid-column: 1/4;
+    }
+
     input {
       box-sizing: border-box;
       width: 100%;
@@ -37,7 +42,7 @@
       padding: 4px;
       font-size: 14px;
       transition: all 0.3s ease;
-      border-bottom: 1px solid lightslategray;
+      border-bottom: 1px solid #afb0b7;
       outline: none !important;
       &:active {
         color: #0064D8;
